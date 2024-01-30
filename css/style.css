@@ -121,7 +121,7 @@ p {
     .b1 {
         height: auto;
         max-height: 130px;
-        display:inline-block
+        display: inline-block
     }
 
     .b2 {
@@ -143,9 +143,21 @@ p {
 }
 
 /* Css para el Navbar */
-.logo img {
-    width: 20%;
-    height: auto;
+.logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo-nav a {
+    text-decoration: none;
+    color: white;
+    font-family: "ubuntu-regular";
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.logo-nav .bi .bi-suitcase {
+    color:red;
 }
 
 .logo img:hover {
@@ -174,6 +186,11 @@ p {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.social-media a {
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .bi.bi-youtube {
