@@ -105,42 +105,7 @@ p {
     padding-right: 40px;
 }
 
-/* Mobile (teléfonos de 720px o menos) */
-@media (max-width: 720px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            'b1 b2'
-            'b3 b2'
-            'b4 b4'
-            'b5 b5'
-            'b6 b6'
-            'b7 b8';
-    }
 
-    .b1 {
-        height: auto;
-        max-height: 130px;
-        display: inline-block
-    }
-
-    .b2 {
-        min-height: 130px;
-        max-height: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .b3 {
-        height: auto;
-        max-height: 125px;
-    }
-
-    .logo img {
-        width: 100%;
-        height: 100%;
-    }
-}
 
 /* Css para el Navbar */
 .logo-nav {
@@ -156,8 +121,12 @@ p {
     margin-left: 10px;
 }
 
-.logo-nav .bi .bi-suitcase {
-    color:red;
+.logo-nav a:hover {
+    color: rgba(255, 228, 196, 0.689);
+}
+
+.bi.bi-suitcase:hover {
+    color: rgba(255, 228, 196, 0.689);
 }
 
 .logo img:hover {
@@ -215,4 +184,85 @@ p {
 
 .bi.bi-instagram:hover {
     color: fuchsia
+}
+
+/* Mobile (teléfonos de 720px hasta 375px) */
+@media (max-width: 720px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'b1 b3'
+            'b2 b2'
+            'b4 b4'
+            'b5 b5'
+            'b6 b6'
+            'b7 b8';
+    }
+
+    .b1 {
+        height: auto;
+        max-height: 130px;
+        display: inline-block
+    }
+
+    .b2 {
+        min-height: 130px;
+        max-height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .b3 {
+        height: 130px;
+        max-height: 100%;
+    }
+
+    .logo-nav a {
+        font-size: 45px;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+/* Mobile (teléfonos de 375px o menos) */
+@media (max-width: 375px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'b1 b2'
+            'b3 b2'
+            'b4 b4'
+            'b5 b5'
+            'b6 b6'
+            'b7 b8';
+    }
+
+    .b1 {
+        height: auto;
+        max-height: 130px;
+        display: inline-block
+    }
+
+    .b2 {
+        min-height: 130px;
+        max-height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .b3 {
+        height: 130px;
+        max-height: 100%;
+    }
+
+    .logo-nav a {
+        font-size: 45px;
+        margin-left: 10px;
+    }
+
+    .social-media a {
+        font-size: 20px;
+    }
 }
