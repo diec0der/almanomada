@@ -90,7 +90,7 @@ p {
 .b7 {
     background-color: #457D58;
     color: white;
-    height: 40px;
+    height: 60px;
     grid-area: b7;
     justify-content: flex-start;
     padding-left: 40px;
@@ -99,7 +99,7 @@ p {
 .b8 {
     background-color: #457D58;
     color: white;
-    height: 40px;
+    height: 60px;
     grid-area: b8;
     justify-content: flex-end;
     padding-right: 40px;
@@ -136,6 +136,7 @@ p {
 .nav-link {
     color: white;
     font-family: "ubuntu-regular";
+    font-size: 90%;
 }
 
 .nav-link:hover {
@@ -186,8 +187,45 @@ p {
     color: fuchsia
 }
 
-/* Mobile (teléfonos de 720px hasta 375px) */
-@media (max-width: 720px) {
+/*Css para el footer*/
+.copyright {
+    float: left;
+    font-size: smaller;
+    font-family: 'ubuntu-italic';
+    margin-top: 10px;
+}
+
+
+.contacto {
+    float: right;
+    margin-right: 50px;
+}
+
+.contacto a {
+    color: white;
+    font-family: 'ubuntu-regular';
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ir-arriba {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.ir-arriba img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Mobile (teléfonos de 750px hasta 375px) */
+@media (max-width: 750px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -219,10 +257,12 @@ p {
 
     .logo-nav a {
         font-size: 45px;
-        margin-left: 10px;
+        margin-left: 30px;
+        margin-top: 10px;
         align-items: center;
         justify-content: center;
     }
+    
 
 }
 
@@ -264,5 +304,15 @@ p {
 
     .social-media a {
         font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 75%;
+    }
+
+    .logo-nav a {
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
     }
 }
