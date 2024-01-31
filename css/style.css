@@ -23,6 +23,14 @@ p {
     text-align: justify;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'ubuntu-regular';
+    margin-top: 20px;
+    font-size: 30px;
+    color: #666;
+}
+
 /* Css para el grid */
 .grid {
     display: grid;
@@ -222,6 +230,46 @@ p {
 .ir-arriba img {
     width: 40px;
     height: 40px;
+}
+
+/* Css para Index*/
+.introduccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+
+}
+
+.box-introduccion {
+    line-height: 200%;
+}
+
+hr.separador {
+    margin: 30px 25vw 10px;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.box-recomendados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    gap: 25px
+
+}
+
+.box-recomendados img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Mobile (teléfonos de 750px hasta 375px) */
