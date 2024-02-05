@@ -572,8 +572,8 @@ button:hover {
     background-color: rgba(255, 228, 196, 0.689);
     color: #457D58;
 }
-/* Mobile (teléfonos de 750px hasta 375px) */
-@media (max-width: 750px) {
+/* Tablet (teléfonos de 1024px hasta 600px) */
+@media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -638,6 +638,9 @@ button:hover {
     align-items: center;
 }
 
+.contacto a {
+    font-size: small;
+
 .ir-arriba {
     position: fixed;
     right: 20px;
@@ -651,9 +654,42 @@ button:hover {
 }
 }
 
+.top-destinos-favoritos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Mobile (teléfonos de 375px o menos) */
-@media (max-width: 375px) {
+.top-destinos-favoritos img {
+    width:80vw;
+    object-fit:contain;
+}
+
+.caja-destinos-favoritos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.caja-destinos-favoritos img {
+    display: none;
+}
+
+.caja-destinos-favoritos p {
+    width: 80%;
+}
+
+.alert {
+    width: 80vw;
+    margin: 10px;
+}
+
+}
+/* Mobile (teléfonos de 600px o menos) */
+@media (max-width: 600px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -662,7 +698,8 @@ button:hover {
             'b4 b4'
             'b5 b5'
             'b6 b6'
-            'b7 b8';
+            'b7 b7'
+            'b8 b8';
     }
 
     .b1 {
