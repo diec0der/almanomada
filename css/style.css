@@ -582,7 +582,8 @@ button:hover {
             'b4 b4'
             'b5 b5'
             'b6 b6'
-            'b7 b8';
+            'b7 b7'
+            'b8 b8';
     }
 
     .b1 {
@@ -611,8 +612,45 @@ button:hover {
         justify-content: center;
     }
 
+    .introduccion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .box-recomendados {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 80vw;
+        height: 600px;
 }
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ir-arriba {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+.ir-arriba img {
+    width: 40px;
+    height: 40px;
+}
+}
+
 
 /* Mobile (teléfonos de 375px o menos) */
 @media (max-width: 375px) {
