@@ -687,6 +687,40 @@ button:hover {
     margin: 10px;
 }
 
+.consejos-de-viajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.consejos-de-viajes p {
+    margin-left: 20px;
+}
+
+.consejos-de-viajes ul {
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.consejos-de-viajes li {
+    margin-bottom: 10px;
+}
+
+.clase-viajeros-solitarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+.clase-viajeros-solitarios img {
+    display: none;
+}
+
+
 }
 /* Mobile (teléfonos de 600px o menos) */
 @media (max-width: 600px) {
