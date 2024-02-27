@@ -1,775 +1,697 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Css para la fuente */
-@font-face {
-    font-family: 'ubuntu-regular';
-    src: url(../assets/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: 'ubuntu-italic';
-    src: url(../assets/fonts/Ubuntu/Ubuntu-Italic.ttf) format('truetype');
+  font-family: "ubuntu-regular";
+  src: url(../assets/fonts/Ubuntu/Ubuntu-Regular.ttf) format("truetype");
 }
-
+@font-face {
+  font-family: "ubuntu-italic";
+  src: url(../assets/fonts/Ubuntu/Ubuntu-Italic.ttf) format("truetype");
+}
 body {
-    font-family: "ubuntu-regular";
+  font-family: "ubuntu-regular";
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 h2 {
-    text-align: center;
-    font-family: 'ubuntu-regular';
-    margin-top: 20px;
-    font-size: 30px;
-    color: #666;
+  text-align: center;
+  font-family: "ubuntu-regular";
+  margin-top: 20px;
+  font-size: 30px;
+  color: #666;
 }
 
-/* Css para el grid */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        'b1 b2 b2 b3'
-        'b4 b4 b4 b4'
-        'b5 b5 b5 b5'
-        'b6 b6 b6 b6'
-        'b7 b7 b8 b8';
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "b1 b2 b2 b3" "b4 b4 b4 b4" "b5 b5 b5 b5" "b6 b6 b6 b6" "b7 b7 b8 b8";
 }
 
-.box {
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.box, .consejos-de-viajes, .conoce-mas .btn.btn-primary, .introduccion {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .b1 {
-    background-color: #457D58;
-    color: white;
-    height: 80px;
-    grid-area: b1;
+  background-color: #457D58;
+  color: white;
+  height: 80px;
+  grid-area: b1;
 }
 
 .b2 {
-    background-color: #457D58;
-    color: white;
-    min-height: 80px;
-    max-height: max-content;
-    grid-area: b2;
+  background-color: #457D58;
+  color: white;
+  min-height: 80px;
+  max-height: max-content;
+  grid-area: b2;
 }
 
 .b3 {
-    background-color: #457D58;
-    color: white;
-    height: 80px;
-    grid-area: b3;
+  background-color: #457D58;
+  color: white;
+  height: 80px;
+  grid-area: b3;
 }
 
 .b4 {
-    color: #666;
-    grid-area: b4;
-    padding-top: 20px;
-    min-height: calc(100vh - 80px);
-    max-height: 100%;
+  color: #666;
+  grid-area: b4;
+  padding-top: 20px;
+  min-height: calc(100vh - 80px);
+  max-height: 100%;
 }
 
 .b5 {
-    color: #666;
-    grid-area: b5;
-    padding-top: 20px;
-    max-height: 100%;
+  color: #666;
+  grid-area: b5;
+  padding-top: 20px;
+  max-height: 100%;
 }
 
 .b6 {
-    color: #666;
-    grid-area: b6;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    max-height: 100%;
+  color: #666;
+  grid-area: b6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: 100%;
 }
 
 .b7 {
-    background-color: #457D58;
-    color: white;
-    height: 60px;
-    grid-area: b7;
-    justify-content: flex-start;
-    padding-left: 40px;
+  background-color: #457D58;
+  color: white;
+  height: 60px;
+  grid-area: b7;
+  justify-content: flex-start;
+  padding-left: 40px;
 }
 
 .b8 {
-    background-color: #457D58;
-    color: white;
-    height: 60px;
-    grid-area: b8;
-    justify-content: flex-end;
-    padding-right: 40px;
+  background-color: #457D58;
+  color: white;
+  height: 60px;
+  grid-area: b8;
+  justify-content: flex-end;
+  padding-right: 40px;
 }
 
-
-
-/* Css para el Navbar */
 .logo-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  animation-name: efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 }
 
 .logo-nav a {
-    text-decoration: none;
-    color: white;
-    font-family: "ubuntu-regular";
-    font-size: 30px;
-    margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: "ubuntu-regular";
+  font-size: 30px;
+  margin-left: 10px;
 }
 
 .logo-nav a:hover {
-    color: rgba(255, 228, 196, 0.689);
+  color: #e2b282;
 }
 
 .bi.bi-suitcase:hover {
-    color: rgba(255, 228, 196, 0.689);
+  color: #e2b282;
 }
 
 .logo img:hover {
-    opacity: 80%;
+  opacity: 80%;
 }
 
 .nav-link {
-    color: white;
-    font-family: "ubuntu-regular";
-    font-size: 90%;
+  color: white;
+  font-family: "ubuntu-regular";
+  font-size: 90%;
 }
 
 .nav-link:hover {
-    color: rgba(255, 228, 196, 0.689);
+  color: #e2b282;
 }
 
 .nav-pills {
-    --bs-nav-pills-link-active-color: bisque;
-    --bs-nav-pills-link-active-bg: #234f3297;
+  --bs-nav-pills-link-active-color: bisque;
+  --bs-nav-pills-link-active-bg: #234f3297;
 }
 
 .nav-link.active {
-    border-radius: 2%;
+  border-radius: 2%;
 }
 
 .social-media {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .social-media a {
-    font-size: 30px;
-    margin-left: 10px;
+  font-size: 30px;
+  margin-left: 10px;
 }
 
 .bi.bi-youtube {
-    color: white;
+  color: white;
 }
 
 .bi.bi-youtube:hover {
-    color: red;
+  color: red;
 }
 
 .bi.bi-twitter-x {
-    color: white;
+  color: white;
 }
 
 .bi.bi-twitter-x:hover {
-    color: black;
+  color: black;
 }
 
 .bi.bi-instagram {
-    color: white;
+  color: white;
 }
 
 .bi.bi-instagram:hover {
-    color: fuchsia
+  color: fuchsia;
 }
 
-/*Css para el footer*/
 .copyright {
-    float: left;
-    font-size: smaller;
-    font-family: 'ubuntu-italic';
-    margin-top: 10px;
+  float: left;
+  font-size: smaller;
+  font-family: "ubuntu-italic";
+  margin-top: 10px;
 }
-
 
 .contacto {
-    float: right;
-    margin-right: 50px;
+  float: right;
+  margin-right: 50px;
 }
 
 .contacto a {
-    color: white;
-    font-family: 'ubuntu-regular';
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    margin-right: 10px;
-    text-align: center;
-    text-transform: uppercase;
+  color: white;
+  font-family: "ubuntu-regular";
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .ir-arriba {
-    position: fixed;
-    right: 20px;
-    bottom: 10px;
-    cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  cursor: pointer;
 }
 
 .ir-arriba img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
-/* Css para Index*/
 .introduccion {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 80%;
-
+  flex-direction: row;
+  text-align: center;
+  width: 80%;
 }
 
 .box-introduccion {
-    line-height: 200%;
+  line-height: 200%;
 }
 
 hr.separador {
-    margin: 30px 25vw 10px;
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
+  margin: 30px 25vw 10px;
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
 }
 
 .box-recomendados {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    text-align: center;
-    width: 90%;
-    gap: 10px
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  gap: 10px;
 }
 
 .card {
-    border: none;
+  border: none;
 }
 
 .box-recomendados img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-body {
-    color: #666;
+  color: #666;
 }
 
 .btn.btn-primary {
-    background-color: white;
-    color: #457D58;
-    text-decoration: underline;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    transition: 0.3s;
+  background-color: white;
+  color: #457D58;
+  text-decoration: underline;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  transition: 0.7s;
 }
-
 .btn.btn-primary:hover {
-    background-color: rgba(255, 228, 196, 0.689);
-    color: #457D58;
+  background-color: #e2b282;
+  color: white;
+  text-decoration: none;
 }
 
 .card-body .card-title {
-    text-align: center;
-    font-weight: bolder;
+  text-align: center;
+  font-weight: bolder;
 }
 
 .card-body .card-text {
-    text-align: center;
-    font-weight: lighter;
+  text-align: center;
+  font-weight: lighter;
 }
 
 .carousel-item {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel-item:hover {
-    filter: sepia(30%);
+  filter: sepia(30%);
 }
-
-/* Atributos para Destinos Favoritos */
-.top-destinos-favoritos {
-    display: flex;
-    height: auto;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-.top-destinos-favoritos img {
-    height: 300px;
-    object-fit: cover;
-}
-
-.paises-destinos-favoritos li {
-    list-style: none;
-}
-
-.paises-destinos-favoritos li a {
-    margin: 0px;
-    padding: 0;
-    text-align: left;
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 2.5;
-    font-size: 18px;
-    text-decoration: none;
-    color: #666;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-.caja-destinos-favoritos {
-    display: flex;
-    height: auto;
-    gap: 20px;
-    justify-content: center;
-}
-
-.caja-destinos-favoritos img {
-    height: 600px;
-    object-fit: cover;
-}
-
-.caja-destinos-favoritos p {
-    text-align: justify;
-    justify-content: center;
-    line-height: 1.5;
-    width: 50%;
-    color: #666;
-}
-
-/* Atributos para Consejos de Viajes*/
 
 .consejos-viajes {
-    text-align: justify;
-    line-height: 1.5;
-    width: 80%;
-    color: #666;
+  text-align: justify;
+  line-height: 1.5;
+  width: 80%;
+  color: #666;
 }
 
 .conoce-mas .btn.btn-primary {
-    background-color: white;
-    color: #457D58;
-    text-decoration: underline;
-    border: none;
-    font-size: x-large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
+  height: fit-content;
+  color: #457D58;
+  text-decoration: underline;
+  border: none;
+  font-size: x-large;
+  padding: 10px;
+  background: linear-gradient(45deg, #457D58, #e2b282);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  transition: background-size 0.5s;
+}
+.conoce-mas .btn.btn-primary:hover {
+  background-size: 100% 100%;
 }
 
 .consejos-de-viajes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
 }
-
 .consejos-de-viajes p {
-    text-align: justify;
-    line-height: 1.5;
-    width: 90%;
-    color: #666;
-    margin-left: 60px;
+  text-align: justify;
+  line-height: 1.5;
+  width: 90%;
+  color: #666;
+  margin-left: 60px;
 }
-
 .consejos-de-viajes ul {
-    background-color: #c8c9c8;
-    width: 100%;
-    height: fit-content;
-    list-style-type: none;
-    display: table-column;
-    display: flexbox;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    color: #2e2d2d;
-    padding-left: 10px;
-    margin-right: 60px;
+  background: linear-gradient(45deg, #457D58, #e2b282);
+  width: 100%;
+  height: fit-content;
+  list-style-type: none;
+  display: table-column;
+  display: flexbox;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #2e2d2d;
+  padding-left: 10px;
+  margin-right: 60px;
 }
-
 .consejos-de-viajes li {
-    margin-bottom: 10px;
-    list-style: none;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
-
-.consejos-de-viajes input[type="checkbox"] {
-    margin-right: 5px;
+.consejos-de-viajes input[type=checkbox] {
+  margin-right: 5px;
 }
 
 .caja-historia-personal {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .historia-personal {
-    text-align: justify;
-    padding: 10px;
-    width: 300px;
-    background-color: #457d581f;
-    color: #666;
-    margin: 10px;
+  text-align: justify;
+  padding: 10px;
+  width: 300px;
+  background-color: #457D58;
+  color: white;
+  margin: 10px;
 }
-
 .historia-personal h3 {
-    text-align: center;
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
-
 .historia-personal img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-/* Atributos para Viajeros Solitarios */
-.caja-viajeros-solitarios {
-    margin-top: 20px;
+.top-destinos-favoritos {
+  display: flex;
+  height: auto;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.top-destinos-favoritos img {
+  height: 300px;
+  object-fit: cover;
 }
 
-.clase-viajeros-solitarios {
-    display: flex;
-    margin-top: 20px;
-    background-color: #e3e4e3;
+.paises-destinos-favoritos li {
+  list-style: none;
+}
+.paises-destinos-favoritos li a {
+  margin: 0px;
+  padding: 0;
+  text-align: left;
+  display: block;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 2.5;
+  font-size: 18px;
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.div-viajeros-solitarios {
-    padding: 15px;
+.caja-destinos-favoritos {
+  display: flex;
+  height: auto;
+  gap: 20px;
+  justify-content: center;
 }
-
-.clase-viajeros-solitarios img {
-    width: 50%;
-
+.caja-destinos-favoritos img {
+  height: 600px;
+  object-fit: cover;
 }
-
-.clase-viajeros-solitarios p {
-    color: #666;
-    text-align: justify;
+.caja-destinos-favoritos p {
+  text-align: justify;
+  justify-content: center;
+  line-height: 1.5;
+  width: 50%;
+  color: #666;
 }
-
-.clase-viajeros-solitarios h3 {
-    color: #666;
-}
-
-.entrevistas {
-    margin: 10px;
-}
-
-.videos-motivacionales {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.videos-motivacionales .videos {
-    width: 45vw;
-    margin: 10px;
-}
-
-/* Css para preguntas frecuentes */
 
 .faq-seccion {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .faq-categoria {
-    width: 90%;
+  width: 90%;
 }
 
 .formulario-h2 {
-    border-bottom: 2px solid #457D58;
-    padding-bottom: 10px;
+  border-bottom: 2px solid #457D58;
+  padding-bottom: 10px;
 }
 
 .faq-categoria h3 {
-    color: #457D58;
-    font-size: large;
+  color: #457D58;
+  font-size: large;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    margin-top: 10px;
-    color: #457D58;
-    font-weight: bold;
+  margin-top: 10px;
+  color: #457D58;
+  font-weight: bold;
 }
 
 .formulario input,
 textarea {
-    width: 60vw;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 60vw;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-    background-color: #457D58;
-    color: white;
-    padding: 10px 15px;
-    width: fit-content;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
+  background-color: #457D58;
+  color: white;
+  padding: 10px 15px;
+  width: fit-content;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 button:hover {
-    background-color: rgba(255, 228, 196, 0.689);
-    color: #457D58;
+  background-color: #e2b282;
+  color: #457D58;
 }
+
+.caja-viajeros-solitarios {
+  margin-top: 20px;
+}
+
+.clase-viajeros-solitarios {
+  display: flex;
+  margin-top: 20px;
+  background: linear-gradient(to top, #457D58, #666);
+}
+.clase-viajeros-solitarios img {
+  width: 50%;
+}
+.clase-viajeros-solitarios p {
+  color: white;
+  text-align: justify;
+}
+.clase-viajeros-solitarios h3 {
+  color: white;
+}
+
+.div-viajeros-solitarios {
+  padding: 15px;
+}
+
+.entrevistas {
+  margin: 10px;
+}
+
+.videos-motivacionales {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.videos-motivacionales .videos {
+  width: 45vw;
+  margin: 10px;
+}
+
 /* Tablet (teléfonos de 1024px hasta 600px) */
 @media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            'b1 b3'
-            'b2 b2'
-            'b4 b4'
-            'b5 b5'
-            'b6 b6'
-            'b7 b7'
-            'b8 b8';
-    }
-
-    .b1 {
-        height: auto;
-        max-height: 130px;
-        display: inline-block
-    }
-
-    .b2 {
-        min-height: 130px;
-        max-height: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .b3 {
-        height: 130px;
-        max-height: 100%;
-    }
-
-    .logo-nav a {
-        font-size: 45px;
-        margin-left: 30px;
-        margin-top: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .introduccion {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .box-recomendados {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .carousel-item {
-        width: 80vw;
-        height: 600px;
-}
-
-.copyright {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b3" "b2 b2" "b4 b4" "b5 b5" "b6 b6" "b7 b7" "b8 b8";
+  }
+  .b1 {
+    height: auto;
+    max-height: 130px;
+    display: inline-block;
+  }
+  .b2 {
+    min-height: 130px;
+    max-height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .b3 {
+    height: 130px;
+    max-height: 100%;
+  }
+  .logo-nav a {
+    font-size: 45px;
+    margin-left: 30px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .introduccion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.contacto a {
+  }
+  .box-recomendados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-item {
+    width: 80vw;
+    height: 600px;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacto a {
     font-size: small;
-
-.ir-arriba {
+  }
+  .contacto a .ir-arriba {
     position: fixed;
     right: 20px;
     bottom: 40px;
     cursor: pointer;
-}
-
-.ir-arriba img {
+  }
+  .contacto a .ir-arriba img {
     width: 40px;
     height: 40px;
-}
-}
-
-.top-destinos-favoritos {
+  }
+  .top-destinos-favoritos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.top-destinos-favoritos img {
-    width:80vw;
-    object-fit:contain;
-}
-
-.caja-destinos-favoritos {
+  }
+  .top-destinos-favoritos img {
+    width: 80vw;
+    object-fit: contain;
+  }
+  .caja-destinos-favoritos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-
-.caja-destinos-favoritos img {
+  }
+  .caja-destinos-favoritos img {
     display: none;
-}
-
-.caja-destinos-favoritos p {
+  }
+  .caja-destinos-favoritos p {
     width: 80%;
-}
-
-.alert {
+  }
+  .alert {
     width: 80vw;
     margin: 10px;
-}
-
-.consejos-de-viajes {
+  }
+  .consejos-de-viajes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80vw;
-}
-
-.consejos-de-viajes p {
+  }
+  .consejos-de-viajes p {
     margin-left: 20px;
-}
-
-.consejos-de-viajes ul {
+  }
+  .consejos-de-viajes ul {
     padding-left: 10px;
     margin-right: 10px;
-}
-
-.consejos-de-viajes li {
+  }
+  .consejos-de-viajes li {
     margin-bottom: 10px;
-}
-
-.clase-viajeros-solitarios {
+  }
+  .clase-viajeros-solitarios {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80vw;
-}
-
-.clase-viajeros-solitarios img {
+  }
+  .clase-viajeros-solitarios img {
     display: none;
-}
-
-
+  }
 }
 /* Mobile (teléfonos de 600px o menos) */
 @media (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            'b1 b2'
-            'b3 b2'
-            'b4 b4'
-            'b5 b5'
-            'b6 b6'
-            'b7 b7'
-            'b8 b8';
-    }
-
-    .b1 {
-        height: auto;
-        max-height: 130px;
-        display: inline-block
-    }
-
-    .b2 {
-        min-height: 130px;
-        max-height: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .b3 {
-        height: 130px;
-        max-height: 100%;
-    }
-
-    .logo-nav a {
-        font-size: 45px;
-        margin-left: 10px;
-    }
-
-    .social-media a {
-        font-size: 20px;
-    }
-
-    .nav-link {
-        font-size: 75%;
-    }
-
-    .logo-nav a {
-        font-size: 30px;
-        margin-left: 30px;
-        margin-top: 30px;
-    }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b2" "b3 b2" "b4 b4" "b5 b5" "b6 b6" "b7 b7" "b8 b8";
+  }
+  .b1 {
+    height: auto;
+    max-height: 130px;
+    display: inline-block;
+  }
+  .b2 {
+    min-height: 130px;
+    max-height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .b3 {
+    height: 130px;
+    max-height: 100%;
+  }
+  .logo-nav a {
+    font-size: 45px;
+    margin-left: 10px;
+  }
+  .social-media a {
+    font-size: 20px;
+  }
+  .nav-link {
+    font-size: 75%;
+  }
+  .logo-nav a {
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

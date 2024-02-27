@@ -1,0 +1,64 @@
+.faq-seccion {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.faq-categoria {
+    width: 90%;
+}
+
+.formulario-h2 {
+    border-bottom: 2px solid $colorprincipal;
+    padding-bottom: 10px;
+}
+
+.faq-categoria h3 {
+    color: $colorprincipal;
+    font-size: large;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    color: $colorprincipal;
+    font-weight: bold;
+}
+
+.formulario input,
+textarea {
+    width: 60vw;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: $colorprincipal;
+    color: $colorcontraste;
+    padding: 10px 15px;
+    width: fit-content;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: $hoverprincipal;
+    color: $colorprincipal;
+}

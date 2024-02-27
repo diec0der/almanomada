@@ -1,0 +1,41 @@
+.caja-viajeros-solitarios {
+    margin-top: 20px;
+}
+
+.clase-viajeros-solitarios {
+    display: flex;
+    margin-top: 20px;
+    background: linear-gradient(to top, $colorprincipal, $colorsecundario);
+
+    img {
+        width: 50%;
+    }
+
+    p {
+        color: $colorcontraste;
+        text-align: justify;
+    }
+
+    h3 {
+        color: $colorcontraste;
+    }
+}
+
+.div-viajeros-solitarios {
+    padding: 15px;
+}
+
+.entrevistas {
+    margin: 10px;
+}
+
+.videos-motivacionales {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .videos {
+        width: 45vw;
+        margin: 10px;
+    }
+}

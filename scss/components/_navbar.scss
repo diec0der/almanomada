@@ -1,0 +1,81 @@
+.logo-nav {
+    display: flex;
+    align-items: center;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.logo-nav a {
+    text-decoration: none;
+    color: $colorcontraste;
+    font-family: "ubuntu-regular";
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.logo-nav a:hover {
+    color: $hoverprincipal;
+}
+
+.bi.bi-suitcase:hover {
+    color: $hoverprincipal;
+}
+
+.logo img:hover {
+    opacity: 80%;
+}
+
+.nav-link {
+    color: $colorcontraste;
+    font-family: "ubuntu-regular";
+    font-size: 90%;
+}
+
+.nav-link:hover {
+    color: $hoverprincipal;
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-color: bisque;
+    --bs-nav-pills-link-active-bg: #234f3297;
+}
+
+.nav-link.active {
+    border-radius: 2%;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-media a {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.bi.bi-youtube {
+    color: $colorcontraste;
+}
+
+.bi.bi-youtube:hover {
+    color: red;
+}
+
+.bi.bi-twitter-x {
+    color: $colorcontraste;
+}
+
+.bi.bi-twitter-x:hover {
+    color: black;
+}
+
+.bi.bi-instagram {
+    color: $colorcontraste;
+}
+
+.bi.bi-instagram:hover {
+    color: fuchsia
+}

@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* Tablet (teléfonos de 1024px hasta 600px) */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b3" "b2 b2" "b4 b4" "b5 b5" "b6 b6" "b7 b7" "b8 b8";
+  }
+  .b1 {
+    height: auto;
+    max-height: 130px;
+    display: inline-block;
+  }
+  .b2 {
+    min-height: 130px;
+    max-height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .b3 {
+    height: 130px;
+    max-height: 100%;
+  }
+  .logo-nav a {
+    font-size: 45px;
+    margin-left: 30px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .introduccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-recomendados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-item {
+    width: 80vw;
+    height: 600px;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacto a {
+    font-size: small;
+  }
+  .contacto a .ir-arriba {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    cursor: pointer;
+  }
+  .contacto a .ir-arriba img {
+    width: 40px;
+    height: 40px;
+  }
+  .top-destinos-favoritos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-destinos-favoritos img {
+    width: 80vw;
+    object-fit: contain;
+  }
+  .caja-destinos-favoritos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .caja-destinos-favoritos img {
+    display: none;
+  }
+  .caja-destinos-favoritos p {
+    width: 80%;
+  }
+  .alert {
+    width: 80vw;
+    margin: 10px;
+  }
+  .consejos-de-viajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+  .consejos-de-viajes p {
+    margin-left: 20px;
+  }
+  .consejos-de-viajes ul {
+    padding-left: 10px;
+    margin-right: 10px;
+  }
+  .consejos-de-viajes li {
+    margin-bottom: 10px;
+  }
+  .clase-viajeros-solitarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+  .clase-viajeros-solitarios img {
+    display: none;
+  }
+}
+/* Mobile (teléfonos de 600px o menos) */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b2" "b3 b2" "b4 b4" "b5 b5" "b6 b6" "b7 b7" "b8 b8";
+  }
+  .b1 {
+    height: auto;
+    max-height: 130px;
+    display: inline-block;
+  }
+  .b2 {
+    min-height: 130px;
+    max-height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .b3 {
+    height: 130px;
+    max-height: 100%;
+  }
+  .logo-nav a {
+    font-size: 45px;
+    margin-left: 10px;
+  }
+  .social-media a {
+    font-size: 20px;
+  }
+  .nav-link {
+    font-size: 75%;
+  }
+  .logo-nav a {
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+/*# sourceMappingURL=mediaqueries.css.map */

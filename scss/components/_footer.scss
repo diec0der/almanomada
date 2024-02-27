@@ -1,0 +1,35 @@
+.copyright {
+    float: left;
+    font-size: smaller;
+    font-family: 'ubuntu-italic';
+    margin-top: 10px;
+}
+
+
+.contacto {
+    float: right;
+    margin-right: 50px;
+}
+
+.contacto a {
+    color: $colorcontraste;
+    font-family: 'ubuntu-regular';
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ir-arriba {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.ir-arriba img {
+    width: 40px;
+    height: 40px;
+}
